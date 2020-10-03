@@ -1,22 +1,22 @@
 #include<iostream>
 using namespace std;
-void fibSeries(int n)
-{
-	int a=1,b=1,c;
-	for(int i=1;i<=n-2;i++)
-	{
-		c=a+b;
-		a=b;
-		b=c;
-	}
-	cout<<c;
-	
-  }
+
+int Fibonacci(int n){
+    if (n < 2){
+        return 1;
+    }
+    
+    else{ 
+        return (Fibonacci(n-2)+Fibonacci(n-1));
+    }
+}
 
 int main()
 {
+
 	int n;
-	cin>>n;
-	fibSeries(n);
+        cout<<"Enter the n-th no."<<endl;
+    	cin>>n;
+    	cout<<"The n-th term is "<<Fibonacci(n)<<endl;
 	return 0;
 }
